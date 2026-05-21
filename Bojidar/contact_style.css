@@ -1,0 +1,106 @@
+.page-indent {
+   
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    
+}
+
+.contact-title {
+    font-size: 2rem;
+    color: black;
+}
+
+.contact-pre-form {
+    font-size: 1rem;
+    color: black;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+font-size: 1.5rem;
+font-weight: 500;
+margin-bottom: 0.25rem;
+color: black;
+}
+
+.form-input{
+      border: 1px solid gray;
+      border-radius: 0.5rem;
+      padding: 0.5rem 0.5rem;
+      font-size: 1rem;
+}
+
+.contact-msg {
+      font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form-input-msg{
+    height: 3rem;  
+    border: 3.5px solid gray;
+      border-radius: 0.5rem;
+      padding: 0.5rem 0.5rem;
+      font-size: 1rem;
+}
+
+.form-textarea {
+  min-height: 140px;
+  resize: vertical;
+  margin-bottom: 5rem;
+}
+
+.form-button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.contact-form {
+  background: white;
+  border: 1px solid #e7e5e4;
+  border-radius: 10px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-button {
+  background: #292524;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.form-button:hover {
+  background: black;
+}
+
+.success-message {
+  display: none;
+  color: green;
+  font-weight: bold;
+}
+
+.success-message.show {
+  display: block;
+}
