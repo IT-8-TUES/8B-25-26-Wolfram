@@ -1,0 +1,83 @@
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f1110;
+      color:white;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:#111;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#d8c3a5;
+      letter-spacing:2px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:35px;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#8ba888;
+    }
+
+    /* ABOUT SECTION */
+
+    .about{
+      padding:120px 10%;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .about h1{
+      font-size:60px;
+      margin-bottom:30px;
+      color:#d8c3a5;
+    }
+
+    .about p{
+      max-width:800px;
+      line-height:1.9;
+      color:#d0d0d0;
+      font-size:18px;
+      margin-bottom:20px;
+    }
+
+    .about-box{
+      margin-top:40px;
+      background:#1a1d1b;
+      padding:35px;
+      border-radius:20px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#0b0c0b;
+      color:#777;
+    }
