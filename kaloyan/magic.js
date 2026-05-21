@@ -91,3 +91,4 @@ function updateDisplay(){
     `Buy Shroom Farm (Cost: ${megaUpgradeCost})`;
 
 }
+// magic mush e peak
