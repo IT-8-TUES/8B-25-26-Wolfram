@@ -1,18 +1,11 @@
 const contactForm = document.getElementById('contact-form');
-
 contactForm.addEventListener('submit', function (e) {
-
   e.preventDefault();
-
-  const successMessage =
-    document.getElementById('contact-success');
-
+  const successMessage = document.getElementById('contact-success');
   successMessage.classList.add('show');
-
   setTimeout(() => {
     successMessage.classList.remove('show');
   }, 3000);
-
   contactForm.reset();
 });
 
@@ -39,28 +32,47 @@ function Catalog() {
   mushrooms.forEach(m => {
     list.innerHTML += `
       <div class="mushroom-card" onclick="showMushroom(${m.id})">
-        <h3 class="mushroom-title">
-          ${m.name}
-        </h3>
-        <p class="mushroom-latin">
-          ${m.latin}
-        </p>
-
+        <h3 class="mushroom-title">${m.name}</h3>
         <span class="badge
           ${m.poisonous
             ? "badge-toxic"
             : "badge-edible"}
         ">
-
           ${m.poisonous
             ? "Toxic"
             : "Edible"}
-
         </span>
-
       </div>
-
     `;
   });
-
 }
+  function showMushroom(id) {
+  const mushroom = mushrooms.find(m => m.id === id);
+  const detail = document.getElementById("catalog-detail");
+  detail.classList.remove("hidden");
+  detail.innerHTML = `
+      <button class="back-button" onclick="Catalog()"> Back </button>
+    <div class="detail-container">
+  <h2 class="detail-title">${mushroom.name}</h2>
+    <p class="mushroom-latin">${mushroom.latin}</p>
+      <p>${mushroom.description}</p>
+         <br>
+      <p> <strong>Taste:</strong> ${mushroom.taste}</p>
+    <p> <strong>Locations:</strong> ${mushroom.locations}</p>
+      <p> <strong>Rarity:</strong> ${mushroom.rarity}</p>
+  <p><strong>Price:</strong>
+${
+mushroom.price
+? "$" + mushroom.price + "/kg"
+: "Not sold"
+}
+    </p>
+   </div>
+  `;
+}
+Catalog();
+
+/*Sthqh da napravq i pop up za vseki item, no...
+Kakto e velikiq slogan:
+"Imashe ideq, nqmashe izpalnenie"
+*/

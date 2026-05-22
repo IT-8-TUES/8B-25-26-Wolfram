@@ -221,3 +221,7 @@ nav{
   background: white;
   color: gray;
 }
+
+.hidden {
+  display: none;
+}
