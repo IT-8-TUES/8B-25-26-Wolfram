@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(200, 200, 200);
+}
+
 .page-indent {
    
       justify-content:center;
@@ -8,6 +12,7 @@
 }
 
 .contact-title {
+    margin-top: 5rem;
     font-size: 2rem;
     color: black;
 }
@@ -53,7 +58,7 @@ color: black;
 .form-textarea {
   min-height: 140px;
   resize: vertical;
-  margin-bottom: 5rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-button {
@@ -69,7 +74,7 @@ color: black;
 }
 
 .contact-form {
-  background: white;
+  background: rgb(225, 220, 220);
   border: 1px solid #e7e5e4;
   border-radius: 10px;
   padding: 25px;
@@ -104,3 +109,51 @@ color: black;
 .success-message.show {
   display: block;
 }
+
+  /* NAVBAR */
+
+  * {
+  box-sizing: border-box;
+}
+
+nav{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#d8c3a5;
+      letter-spacing:2px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:35px;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+      font-size:16px;
+    }
+
+    .nav-links a:hover{
+      color:#8ba888;
+    }
+
+    .pre-catalog-text {
+  color: black;
+  margin-bottom: 40px;
+    }
