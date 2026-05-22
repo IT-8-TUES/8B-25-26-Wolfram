@@ -115,22 +115,30 @@ h1 {
     align-items: start;
     border: 3px solid transparent;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    scroll-margin-top: 140px;
+}
+
+.recipe-title {
+    scroll-margin-top: 140px;
 }
 
 .recipe-image {
     position: sticky;
-    top: 100px;
+    top: 0;
+    align-self: start;
+    min-height: 320px;
 }
 
 .recipe-image img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
 }
 
 .recipe-content {
-    overflow-y: auto;
-    max-height: 600px;
+    overflow: visible;
+    max-height: none;
 }
 
 .recipe-content::-webkit-scrollbar {
