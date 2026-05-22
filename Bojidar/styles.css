@@ -157,3 +157,67 @@ nav{
   color: black;
   margin-bottom: 40px;
     }
+
+    .catalog-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.catalog-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.catalog-text {
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.mushroom-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.mushroom-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.badge-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.badge-edible {
+  background: white;
+  color: green;
+}
+
+.badge-toxic {
+  background: white;
+  color: red;
+}
+
+.badge-rarity {
+  background: white;
+  color: gray;
+}
