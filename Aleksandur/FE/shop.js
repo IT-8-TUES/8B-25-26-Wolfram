@@ -1,6 +1,11 @@
 function initShopSearch() {
     const searchInput = document.getElementById('searchInput');
     const items = document.querySelectorAll('.item');
+    const modal = document.getElementById('recipeModal');
+    const modalMushroomName = document.getElementById('modalMushroomName');
+    const modalYes = document.getElementById('modalYes');
+    const modalNo = document.getElementById('modalNo');
+    let selectedMushroom = '';
 
     console.log('shop.js: initShopSearch run, items found =', items.length);
 
@@ -24,6 +29,33 @@ function initShopSearch() {
                 item.style.display = 'none';
             }
         });
+    });
+
+    items.forEach(item => {
+        item.addEventListener('click', function() {
+            const mushroomName = this.querySelector('h3').textContent;
+            selectedMushroom = mushroomName;
+            modalMushroomName.textContent = mushroomName;
+            modal.classList.add('active');
+        });
+    });
+
+    // Modal Yes button
+    modalYes.addEventListener('click', function() {
+        const recipePage = 'Recepies.html';
+        window.location.href = recipePage + '?mushroom=' + encodeURIComponent(selectedMushroom);
+    });
+
+    // Modal No button
+    modalNo.addEventListener('click', function() {
+        modal.classList.remove('active');
+    });
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
     });
 }
 

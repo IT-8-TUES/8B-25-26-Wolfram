@@ -18,5 +18,116 @@
             </div>
         </nav>
 <body>
-    
+    <div class="recipes-container">
+        <div class="recipe-card">
+            <div class="recipe-image">
+                <img src="https://via.placeholder.com/400x300" alt="Porcini Mushroom">
+            </div>
+            <div class="recipe-content">
+                <h2 class="recipe-title">Porcini Mushroom</h2>
+                <div class="recipe-section">
+                    <h3>Classic Porcini Risotto</h3>
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>200g dried porcini mushrooms</li>
+                        <li>300g Arborio rice</li>
+                        <li>1 onion, finely chopped</li>
+                        <li>100ml white wine</li>
+                        <li>1L vegetable broth</li>
+                        <li>50g Parmesan cheese</li>
+                        <li>2 tbsp olive oil</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>
+                        <li>Soak porcini mushrooms in warm water for 20 minutes</li>
+                        <li>Strain and chop, reserve the soaking liquid</li>
+                        <li>Sauté onion in olive oil until soft</li>
+                        <li>Add rice and toast for 2 minutes</li>
+                        <li>Add wine and let it evaporate</li>
+                        <li>Gradually add warm broth, stirring constantly</li>
+                        <li>Add mushrooms and continue until rice is creamy</li>
+                        <li>Finish with Parmesan and serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-image">
+                <img src="https://via.placeholder.com/400x300" alt="Shiitake Mushroom">
+            </div>
+            <div class="recipe-content">
+                <h2 class="recipe-title">Shiitake Mushroom</h2>
+                <div class="recipe-section">
+                    <h3>Grilled Shiitake Steaks</h3>
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>4 large shiitake mushroom caps</li>
+                        <li>3 tbsp balsamic vinegar</li>
+                        <li>2 tbsp olive oil</li>
+                        <li>3 cloves garlic, minced</li>
+                        <li>Fresh thyme</li>
+                        <li>Salt and pepper</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>
+                        <li>Mix olive oil, balsamic, garlic, and thyme</li>
+                        <li>Coat mushroom caps with marinade</li>
+                        <li>Let sit for 15 minutes</li>
+                        <li>Grill for 4-5 minutes per side</li>
+                        <li>Serve hot with remaining sauce</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-image">
+                <img src="https://via.placeholder.com/400x300" alt="Oyster Mushroom">
+            </div>
+            <div class="recipe-content">
+                <h2 class="recipe-title">Oyster Mushroom</h2>
+                <div class="recipe-section">
+                    <h3>Creamy Oyster Mushroom Pasta</h3>
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>400g oyster mushrooms, sliced</li>
+                        <li>400g pasta</li>
+                        <li>200ml heavy cream</li>
+                        <li>2 cloves garlic</li>
+                        <li>2 tbsp butter</li>
+                        <li>Fresh parsley</li>
+                        <li>Lemon juice</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>
+                        <li>Cook pasta according to package directions</li>
+                        <li>Melt butter in a large pan</li>
+                        <li>Sauté mushrooms and garlic until golden</li>
+                        <li>Add cream and simmer for 10 minutes</li>
+                        <li>Toss with cooked pasta</li>
+                        <li>Garnish with parsley and lemon juice</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const mushroomParam = params.get('mushroom');
+        
+        if (mushroomParam) {
+            const recipeCards = document.querySelectorAll('.recipe-card');
+            recipeCards.forEach(card => {
+                const title = card.querySelector('.recipe-title').textContent;
+                if (title.includes(mushroomParam)) {
+                    setTimeout(() => {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        card.style.animation = 'pulse 0.6s ease-in-out';
+                    }, 100);
+                }
+            });
+        }
+    </script>
 </body>
