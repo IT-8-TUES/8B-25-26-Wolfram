@@ -222,6 +222,7 @@ h1 {
 
     .recipe-image {
         position: static;
+        height: auto;
     }
 
     .recipe-title {
